@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sys-setup"
+version = "1.0.0"
+dependencies = [
+    "httpx",
+    "click",
+    "pydantic",
+    "Jinja2",
+    "rich",
+    "rich-click",
+    "archinstall"
+]
+requires-python = ">=3.12"
+authors = [
+  {name = "Dax Harris", email = "mvh3875@rit.edu"}
+]
+description = "Arch installation scripts & configs"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["installer", "dotfiles"]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/iTecAI/sys-setup"
+
+[project.scripts]
+sys-setup = "sys_setup:main"
